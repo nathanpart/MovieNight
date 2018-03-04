@@ -1,0 +1,350 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/filter_overflow"
+              android:orientation="vertical"
+              tools:context="partridge.nathan.movienight.fragments.FilterFragment">
+
+    <TextView
+        android:id="@+id/filter_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/filter_settings"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:id="@+id/filter_scoller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/scroller_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/movie_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/movie_background"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/movie_section_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/movie_section_label"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/movie_vote_count_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:labelFor="@id/movie_vote_count"
+                    android:text="@string/vote_count_label"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/movie_vote_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:id="@+id/movie_rating_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/rating_label"
+                    android:textSize="18sp"/>
+
+                <RatingBar
+                    android:id="@+id/movie_ratings"
+                    style="@style/Widget.AppCompat.RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:rating="1"
+                    android:stepSize="1"/>
+
+                <LinearLayout
+                    android:id="@+id/movie_horiz_fields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:id="@+id/movie_date_fields"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background_highlight"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/release_date_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/release_date_label"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:id="@+id/movie_start_end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/movie_start_fields"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/movie_start_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/start_date_label"
+                                    android:textSize="14sp"/>
+
+                                <Button
+                                    android:id="@+id/movie_start_button"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/background_button"
+                                    tools:text="10/16/2000"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/movie_end_fields"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/movie_end_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_date_label"/>
+
+                                <Button
+                                    android:id="@+id/movie_end_button"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="2dp"
+                                    android:background="@color/background_button"
+                                    tools:text="10/26/2017"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/movie_genre_fields"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="2dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/movie_genre_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#80FFFFFF"
+                            android:text="@string/genre_label"/>
+
+                        <ProgressBar
+                            android:id="@+id/movie_progress_bar"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/television_section"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/tv_background"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv_section_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/tv_section_label"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_vote_count_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:labelFor="@id/tv_vote_count"
+                    android:text="@string/vote_count_label"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/tv_vote_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:ems="10"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:id="@+id/tv_rating_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/rating_label"
+                    android:textSize="18sp"/>
+
+                <RatingBar
+                    android:id="@+id/tv_ratings"
+                    style="@style/Widget.AppCompat.RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:rating="1"
+                    android:stepSize="1"/>
+
+                <LinearLayout
+                    android:id="@+id/tv_horiz_fields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/tv_date_fields"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background_highlight"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/airtime_date_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/airtime_date_label"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:id="@+id/tv_start_end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:id="@+id/tv_start_fields"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_start_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/start_date_label"/>
+
+                                <Button
+                                    android:id="@+id/tv_start_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/background_button"
+                                    tools:text="10/16/2000"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tv_end_fields"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_end_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_date_label"/>
+
+                                <Button
+                                    android:id="@+id/tv_end_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="2dp"
+                                    android:background="@color/background_button"
+                                    tools:text="10/20/2017"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tv_genre_fields"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="2dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+
+                        <Button
+                            android:id="@+id/tv_genre_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background_button"
+                            android:text="@string/genre_label"/>
+
+                        <ProgressBar
+                            android:id="@+id/tv_progress_bar"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

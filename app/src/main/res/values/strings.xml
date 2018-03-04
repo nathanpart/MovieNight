@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">Movie Night</string>
+
+    <string name="movie_genre_url">genre/movie/list</string>
+    <string name="tv_genre_url">genre/tv/list</string>
+    <string name="movie_list_request">discover/movie</string>
+    <string name="movie_detail_request">movie/%d</string>
+    <string name="tv_detail_request">tv/%d</string>
+    <string name="tv_list_request">discover/tv</string>
+
+    <string name="tmdb_api_key">2a166086cd093bc91c559855fb9212f6</string>
+    <string name="request_base_url"><![CDATA[https://api.themoviedb.org/3/%s?%s&language=%s&api_key=%s]]></string>
+    <string name="request_noparms_url"><![CDATA[https://api.themoviedb.org/3/%s?language=%s&api_key=%s]]></string>
+    <string name="tmdb_locale">en-US</string>
+    <string name="genre_endpoint">genre/%s/list</string>
+    <string name="list_endpoint">discover/%s</string>
+    <string name="detail_endpoint">%s/%d</string>
+    <string name="movie_list_params"><![CDATA[%svote_average.gte=%f&vote_count.gte=%d&primary_release_date.lte=%s&primary_release_date.gte=%s&page=%d&include_video=false&include_adult=false&sort_by=%s]]></string>
+    <string name="tv_list_params"><![CDATA[with_genres=%s&include_null_first_air_dates=false&vote_count.gte=%d&vote_average.gte=%f&page=%d&first_air_date.lte=%s&first_air_date.gte=%s&sort_by=%s]]></string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movie_section_label">Movies:</string>
+    <string name="vote_count_label">Minimum Votes:</string>
+    <string name="rating_label">Minimum Rating:</string>
+    <string name="tv_section_label">Television Shows:</string>
+    <string name="movie_start_label">Start Release Date:</string>
+    <string name="release_date_label">Release Date:</string>
+    <string name="start_date_label">Start:</string>
+    <string name="end_date_label">End:</string>
+    <string name="genre_label">Select Genre</string>
+    <string name="airtime_date_label">First Air Date:</string>
+    <string name="filter_settings">Filter Settings:</string>
+    <string name="select_movie_genres">Select Movie Genres:</string>
+    <string name="select_tv_genres">Select Television Genres:</string>
+    <string name="release_range_start">Release Range Start Date:</string>
+    <string name="release_range_end">Release Range End Date:</string>
+    <string name="airdate_range_start">Airdate Range Start:</string>
+    <string name="airdate_range_end">Airdate Range End:</string>
+    <string name="select_date">Select Date:</string>
+    <string name="sort_field_label">Sort Order:</string>
+    <string name="sort_button">Button</string>
+    <string name="sort_dir_descr">Sort Direction Button</string>
+    <string name="count_label">Vote Count:</string>
+    <string name="popularity">Popularity:</string>
+    <string name="revenue">Revenue:</string>
+    <string name="goto_first_page">Goto First Page</string>
+    <string name="goto_previous_page">Goto Previous Page</string>
+    <string name="goto_next_page">Goto Next Page</string>
+    <string name="goto_last_page">Goto Last Page</string>
+    <string name="release_date">Release Date:</string>
+    <string name="airdate">First Airdate:</string>
+    <string name="paging_text">Page %d of %d</string>
+    <string name="genres">Genres:</string>
+    <string name="production_companies">Production Companies:</string>
+    <string name="detail_vote_count">%d</string>
+    <string name="detail_popularity">%.2f</string>
+    <string name="detail_runtime">%s %s</string>
+    <string name="detail_runtime_min">%dmin</string>
+    <string name="detail_runtime_hour">%dh</string>
+    <string name="detail_revenue">$%,d</string>
+    <string name="detail_budget">$%,d</string>
+    <string name="detail_release_date">%s</string>
+    <string name="networks">Networks:</string>
+    <string name="overview">Overview:</string>
+    <string name="detail_air_date">%s</string>
+    <string name="number_episodes">%d</string>
+    <string name="number_seasons">%d</string>
+    <string name="show_type">%s</string>
+    <string name="error_dialog_title">Error</string>
+    <string name="error_dialog_button">OK</string>
+    <string name="listings">Listings</string>
+    <string name="filter">Filter</string>
+    <string name="popularity_label">Popularity:</string>
+    <string name="runtime_label">Runtime:</string>
+    <string name="budget_label">Budget</string>
+    <string name="episodes_label">Episodes:</string>
+    <string name="seasons_label">Seasons:</string>
+    <string name="show_type_label">Show Type:</string>
+    <string name="author_label">Author:</string>
+    <string name="author">Nathan Partridge</string>
+
+    <string-array name="movie_sort_order">
+        <item>Popularity</item>
+        <item>Release Date</item>
+        <item>Revenue</item>
+        <item>Title</item>
+        <item>Rating</item>
+        <item>Vote Count</item>
+    </string-array>
+
+    <string-array name="tv_sort_order">
+        <item>Popularity</item>
+        <item>First Airdate</item>
+        <item>Rating</item>
+    </string-array>
+
+    <string-array name="page_tab_strings">
+        <item>Filter Settings</item>
+        <item>Movie Listings</item>
+        <item>Television Listings</item>
+    </string-array>
+
+</resources>

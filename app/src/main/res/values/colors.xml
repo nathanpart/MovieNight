@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="movie_background">#81c8fd</color>
+    <color name="tv_background">#33adf9</color>
+    <color name="background_highlight">#20FFFFFF</color>
+    <color name="background_button">#80FFFFFF</color>
+    <color name="sort_background">#fe9544</color>
+    <color name="movie_highlight">#91cffd</color>
+    <color name="tv_highlight">#4db7f9</color>
+    <color name="filter_overflow">#298ac7</color>
+</resources>

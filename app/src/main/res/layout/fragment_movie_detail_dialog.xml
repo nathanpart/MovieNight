@@ -1,0 +1,218 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context="partridge.nathan.movienight.fragments.MovieDetailDialogFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/movie_highlight"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            tools:text="The Money Pit"/>
+
+        <TextView
+            android:id="@+id/tag_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/movie_title"
+            android:textSize="18sp"
+            tools:text="The house that fell apart around them"/>
+
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tag_line"
+            android:numStars="10"
+            android:rating="2.5"
+            android:stepSize=".25"/>
+
+        <TextView
+            android:id="@+id/vote_count_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ratingBar"
+            android:layout_marginEnd="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="@string/count_label"/>
+
+        <TextView
+            android:id="@+id/vote_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ratingBar"
+            android:layout_toEndOf="@+id/vote_count_label"
+            android:textSize="16sp"
+            tools:text="1432"/>
+
+        <TextView
+            android:id="@+id/popularity_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vote_count_label"
+            android:layout_marginEnd="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="@string/popularity_label"/>
+
+        <TextView
+            android:id="@+id/popularity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vote_count"
+            android:layout_toEndOf="@id/popularity_label"
+            android:textSize="16sp"
+            tools:text="43.32"/>
+
+        <TextView
+            android:id="@+id/runtime_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/popularity_label"
+            android:layout_marginEnd="5dp"
+            android:text="@string/runtime_label"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/runtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/popularity"
+            android:layout_toEndOf="@id/runtime_label"
+            android:textSize="16sp"
+            tools:text="90"/>
+
+
+        <TextView
+            android:id="@+id/overview_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/runtime"
+            android:layout_marginTop="20dp"
+            android:text="@string/overview"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/overview_label"
+            android:textSize="16sp"
+            tools:text="They bought a mansion the fell apart around them.  They then fell into the money pit fixing it up."/>
+
+        <TextView
+            android:id="@+id/release_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/overview"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="@string/release_date"/>
+
+
+        <TextView
+            android:id="@+id/release_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/overview"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/release_date_label"
+            android:textSize="16sp"
+            tools:text="3-20-1986"/>
+
+        <TextView
+            android:id="@+id/revenue_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/release_date_label"
+            android:layout_marginEnd="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="@string/revenue"/>
+
+
+        <TextView
+            android:id="@+id/revenue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/release_date"
+            android:layout_toEndOf="@id/revenue_label"
+            android:textSize="16sp"
+            tools:text="$124000"/>
+
+        <TextView
+            android:id="@+id/budget_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/revenue_label"
+            android:layout_marginEnd="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="@string/budget_label"/>
+
+        <TextView
+            android:id="@+id/budget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/revenue"
+            android:layout_toEndOf="@id/budget_label"
+            android:textSize="16sp"
+            tools:text="$1,000,000"/>
+
+        <TextView
+            android:id="@+id/genres_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/budget"
+            android:layout_marginTop="20dp"
+            android:text="@string/genres"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:id="@+id/genres_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/genres_label"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/production_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/genres_container"
+            android:layout_marginTop="20dp"
+            android:text="@string/production_companies"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:id="@+id/production_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/production_label"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>
